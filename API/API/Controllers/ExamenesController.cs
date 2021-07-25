@@ -69,7 +69,19 @@ namespace API.Controllers
 			}
 			return Ok(result);
 		}
+		
+		[HttpDelete]
 
+		public IActionResult Delete(Models.Examenes model)
+		{
+			int result=0;
+			using(var db= new MySqlConnection(_connection))
+				{
+				var sql="delete from examenes where ID=@ID";
+				result = db.Execute(sql, model);						
+				}
+			return Ok(result);
+		}
 	
 	}
 }
