@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Hp19iUyuVaC9xaxPXyTRG9b9CTvBcZlkdQAmNsqSo2jZUkCuPk3B2YXdxfxzCAC+sxezZhHMCtM7GYYwH87ONg==",
+  "dgSpecHash": "AztMbsTY+/uAVtb0tLeTqd56ZH5NLcnY/RWQja1pGIsbAo0jQuUnRtVcf5c+vSTrRGGolWSb9BF/TLRiM8i7Kg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\dayan\\OneDrive\\Documentos\\APLICACIONES DISTRIBUIDAS\\API\\API\\API.csproj",
+  "projectFilePath": "C:\\Users\\dayan\\OneDrive\\Documentos\\.NET\\API\\API\\API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\dayan\\.nuget\\packages\\bouncycastle.netcore\\1.8.5\\bouncycastle.netcore.1.8.5.nupkg.sha512",
     "C:\\Users\\dayan\\.nuget\\packages\\dapper\\2.0.90\\dapper.2.0.90.nupkg.sha512",

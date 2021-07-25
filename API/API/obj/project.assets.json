@@ -6858,11 +6858,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dayan\\OneDrive\\Documentos\\APLICACIONES DISTRIBUIDAS\\API\\API\\API.csproj",
+      "projectUniqueName": "C:\\Users\\dayan\\OneDrive\\Documentos\\.NET\\API\\API\\API.csproj",
       "projectName": "API",
-      "projectPath": "C:\\Users\\dayan\\OneDrive\\Documentos\\APLICACIONES DISTRIBUIDAS\\API\\API\\API.csproj",
+      "projectPath": "C:\\Users\\dayan\\OneDrive\\Documentos\\.NET\\API\\API\\API.csproj",
       "packagesPath": "C:\\Users\\dayan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dayan\\OneDrive\\Documentos\\APLICACIONES DISTRIBUIDAS\\API\\API\\obj\\",
+      "outputPath": "C:\\Users\\dayan\\OneDrive\\Documentos\\.NET\\API\\API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
