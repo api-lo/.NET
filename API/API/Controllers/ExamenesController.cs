@@ -58,14 +58,16 @@ namespace API.Controllers
 			int result = 0;
 			using (var db = new MySqlConnection(_connection))
 			{
-				var sql = "UPDATE examenes set Nombre=@Nombre,Apellido=@Apellido, " +
-					"FechaNacimiento=@FechaNacimiento,DNI = @DNI, Genero = @Genero, Leucocitos = @Leucocitos, " +
-					"Hemoglobina = @Hemoglobina, Hematocrito = @Hematocrito, Hematies = @Hematies, " +
-					"VCM = @VCM, HCM = @HCM, " +
-					"CHCM = @CHCM, RDWCV = @RDWCV, " + "Linfocitos = @Linfocitos, Monocitos = @Monocitos, " +
-					"Eosinofilos = @Eosinofilos, Basofilos = @Basofilos, VPM = @VPM, Plaquetas = @Plaquetas, " +
-					"Diagnosticos = @Diagnosticos"+" where ID = @ID";
-					result = db.Execute(sql, model);
+				string sql = string.Format("UPDATE examenes set Nombre='{0}',Apellido='{1}', " +
+					"FechaNacimiento='{2}',DNI = '{3}', Genero = '{4}', Leucocitos = '{5}', " +
+					"Hemoglobina = '{6}', Hematocrito = '{7}', Hematies = '{8}', " + "VCM = '{9}', HCM = '{10}', " +
+					"CHCM = '{11}', RDWCV = '{12}', " + "Linfocitos = '{13}', Monocitos = '{14}', " +
+					"Eosinofilos = '{15}', Basofilos = '{16}', VPM = '{17}', Plaquetas = '{18}', " +
+					"Diagnosticos = '{19}'" + " where ID = '{20}'", model.Nombre, model.Apellido,model.FechaNacimiento,
+					model.DNI,model.Genero,model.Leucocitos,model.Hemoglobina,model.Hematocrito,model.Hematies,
+					model.VCM,model.HCM,model.GHCM, model.RDWCV,model.Linfocitos,model.Monocitos,model.Eosinofilos,
+					model.Basofilos,model.VPM,model.Plaquetas,model.Diagnosticos, model.ID);
+					result = db.Execute(sql);
 			}
 			return Ok(result);
 		}
