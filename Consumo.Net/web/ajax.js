@@ -21,67 +21,8 @@ function consultaAjax() {
 
     });
 }
-function consultarPornombre()
-{
-    if (!document.getElementById("nombreCheck").checked)
-    {
-        $.ajax({
-            method: "GET",
-            url: "https://localhost/Php/Nombre.php/?name=" + document.getElementById("busqueda").value + "",
-            success: function (data) {
-                llenarTabla(data);
-            },
-            error: function (data) {
-                console.log(data.status);
-            }
-
-        });
-    } else
-    {
-        $.ajax({
-            method: "GET",
-            url: "https://localhost/Php/DNI.PHP/?DNI=" + document.getElementById("busqueda").value + "",
-            success: function (data) {
-                llenarTabla(data);
 
 
-            },
-            error: function (data) {
-                console.log(data.status);
-            }
-
-        });
-    }
-}
-function autocompletad(bandera)
-{
-    var frutas = [];
-    var Jdatos = JSON.parse(datos);
-    console.log(Jdatos);
-    if (bandera)
-    {
-        document.getElementById("dniCheck").checked = false;
-        for (var i = 0; i < Jdatos.items.length; i++)
-        {
-            frutas.push(Jdatos.items[i].DNI);
-        }
-        $("#busqueda").autocomplete({
-            source: frutas
-        });
-    } else
-    {
-        document.getElementById("nombreCheck").checked = false;
-
-        for (var i = 0; i < Jdatos.items.length; i++)
-        {
-            frutas.push(Jdatos.items[i].Nombre);
-        }
-        $("#busqueda").autocomplete({
-            source: frutas
-        });
-    }
-
-}
 function eliminarDato(id) {
     var json = {
         "ID": id
