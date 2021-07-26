@@ -36,7 +36,7 @@
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <button class="dropdown-item" data-toggle="modal" data-target="#exampleModal">Registrar</button>
-                            <button class="dropdown-item" data-toggle="modal" >Editar Diagnostico</button>
+                            <button class="dropdown-item" data-toggle="modal" data-target="#editarModal" >Editar Diagnostico</button>
                             <a class="dropdown-item" href="#">Ver listado</a>
                             <div class="dropdown-divider">Grafica de examenes</div>                            
                         </div>
@@ -323,7 +323,148 @@
             </div>
         </div>
         
-        q
+        <!--Modales para editar datos-->
+        <!-- Modal -->
+        <div class="modal fade" id="editarModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Formulario para editar</h5>
+                        
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <form  enctype="" >
+                        <div class="modal-body">
+
+                            <div class="alert alert-danger" hidden="True" role="alert">
+                                Toda la información debe ser llenada
+                            </div>
+                            <div class="form-row">
+                                
+
+                                <div class="form-group col-md-6">
+                                    <label for="inputEmail4">Nombre:</label>
+                                    <input name="Nombre" type="text" class="form-control form-control-sm" id="Nombre" >
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="inputPassword4">Apellido:</label>
+                                    <input name="Apellido"  type="text" class="form-control form-control-sm" id="Apellido" >
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group col-md-4">
+                                    <label for="inputEmail4">Fecha nacimientos:</label>
+                                    <input name="FechaNacimiento"  type="text" class="form-control form-control-sm" id="FechaNacimiento">
+                                </div>
+                                <div class="form-group col-md-5">
+                                    <label for="inputPassword4">DNI:</label>
+                                    <input name="DNI" type="number" class="form-control form-control-sm" id="DNI" >
+                                </div>
+                                <div class="form-group col-md-3">
+                                    <label for="inputPassword4">Genero:</label>
+                                    <select  class="form-control form-control-sm" name="Genero" id="Genero">
+                                        <option>Masculino</option>
+                                        <option>Femenino</option>
+                                        <option>Sin especificar</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label  for="inputEmail4">Leucocitos:</label>
+                                    <input name="Leucocitos" type="number" class="form-control form-control-sm" id="Leucocitos" >
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="inputPassword4">Hemoglobina:</label>
+                                    <input name="Hemoglobina" type="number" class="form-control form-control-sm" id="Hemoglobina" >
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="inputEmail4">Hematocrito:</label>
+                                    <input name="Hematocrito" type="number" class="form-control form-control-sm" id="Hematocrito" >
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="inputPassword4">Hematies:</label>
+                                    <input name="Hematies" type="number" class="form-control form-control-sm" id="Hematies" >
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group col-md-3">
+                                    <label for="inputEmail4">V.C.M</label>
+                                    <input name="VCM" type="number" class="form-control form-control-sm" id="VCM">
+                                </div>
+                                <div class="form-group col-md-3">
+                                    <label for="inputPassword4">H.C.M</label>
+                                    <input name="HCM" type="number" class="form-control form-control-sm" id="HCM">
+                                </div>
+                                <div class="form-group col-md-3">
+                                    <label for="inputPassword4">C.H.C.M</label>
+                                    <input name="CHCM" type="number" class="form-control form-control-sm" id="CHCM">
+                                </div>
+                                <div class="form-group col-md-3">
+                                    <label for="inputPassword4">R.D.W.C.V</label>
+                                    <input name="RDWCV" type="number" class="form-control form-control-sm" id="RDWCV">
+                                </div>
+                            </div>
+
+
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="inputEmail4">Linfocitos:</label>
+                                    <input name="Linfocitos" type="number" class="form-control form-control-sm" id="Linfocitos">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="inputPassword4">Monocitos:</label>
+                                    <input name="Monocitos" type="number" class="form-control form-control-sm" id="Monocitos">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="inputEmail4">Eosinofilos:</label>
+                                    <input name="Eosinofilos" type="number" class="form-control form-control-sm" id="Eosinofilos">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="inputPassword4">Basofilos:</label>
+                                    <input name="Basofilos" type="number" class="form-control form-control-sm" id="Basofilos">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="inputEmail4">V.P.M.</label>
+                                    <input name="VPM" type="number" class="form-control form-control-sm" id="VPM">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="inputPassword4">Plaquetas:</label>
+                                    <input name="Plaquetas" type="number" class="form-control form-control-sm" id="Plaquetas">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="inputAddress2">Diagnósticos medico:</label>
+                                <textarea name="Diagnosticos" class="form-control" id="Diagnosticos">                                    
+                                </textarea>                                
+                            </div>                          
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                            <input type="submit" class="btn btn-primary" value="Guardar" onclick="modificarDato()">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        
     </body>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
