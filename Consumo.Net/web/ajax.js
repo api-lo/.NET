@@ -12,7 +12,7 @@ function consultaAjax() {
 
             datos = data;
             llenarTabla();
-            document.getElementById("nombreCheck").checked = true;
+        
 //            autocompletad(data);
         },
         error: function (data) {
@@ -94,7 +94,7 @@ function eliminarDato(id) {
 
         success: function (data) {
             consultaAjax();
-            document.getElementById("nombreCheck").checked = true;
+            //document.getElementById("nombreCheck").checked = true;
 //            autocompletad(data);
         },
         error: function (data) {
@@ -129,29 +129,6 @@ function editarDato(Id, Nombre, Apellido, FechaNacimiento, DNI, Genero,
     document.getElementById("VPM").value = VPM;
     document.getElementById("Plaquetas").value = Plaquetas;
     document.getElementById("Diagnosticos").value = Diagnosticos;
-
-//        "ID":id,
-//        "Nombre": document.getElementById("Nombre"),
-//        "Apellido":document.getElementById("Apellido"),
-//        "FechaNacimiento":document.getElementById("FechaNacimiento"),
-//        "DNI":document.getElementById("DNI"),
-//        "Genero":document.getElementById("Genero"),
-//        "Leucocitos":document.getElementById("Leucocitos"),
-//        "Hemoglobina":document.getElementById("Hemoglobina"),
-//        "Hematocrito":document.getElementById("Hematocrito"),
-//        "Hematies":document.getElementById("Hematies"),
-//        "VCM":document.getElementById("VCM"),
-//        "HCM":document.getElementById("HCM"),
-//        "CHCM":document.getElementById("CHCM"),
-//        "RDWCV":document.getElementById("RDWCV"),
-//        "Linfocitos":document.getElementById("Linfocitos"),
-//        "Monocitos":document.getElementById("Monocitos"),
-//        "Eosinofilos":document.getElementById("Eosinofilos"),
-//        "Basofilos":document.getElementById("Basofilos"),
-//        "VPM":document.getElementById("VPM"),
-//        "Plaquetas":document.getElementById("Plaquetas"),
-//        "Diagnosticos":document.getElementById("Diagnosticos")
-
 
 }
 
@@ -189,7 +166,7 @@ function modificarDato() {
 
         success: function (data) {
             consultaAjax();
-            document.getElementById("nombreCheck").checked = true;
+            //document.getElementById("nombreCheck").checked = true;
             alert("Se guardó");
 //            autocompletad(data);
         },
@@ -208,32 +185,7 @@ function llenarTabla()
     var cadena = "";
     var table = document.getElementById("autosTable");
     table.innerHTML = cadena;
-//    Jdatos=datosl;
     console.log(Jdatos);
-//    for (var item in datos) {
-//        cadena += "<tr>" +
-//                "<td>" + item.Nombre + "</td>" +
-//                "<td>" + item.Apellido + "</td>" +
-//                "<td>" + item.fecha + "</td>" +
-//                "<td>" + item.DNI + "</td>" +
-//                "<td>" + item.Genero + "</td>" +
-//                "<td>" + item.Leucocitos + "</td>" +
-//                "<td>" + item.Hemoglobina + "</td>" +
-//                "<td>" + item.Hematocrito + "</td>" +
-//                "<td>" + item.Hematies + "</td>" +
-//                "<td>" + item.VCM + "</td>" +
-//                "<td>" + item.HCM + "</td>" +
-//                "<td>" + item.CHCM + "</td>" +
-//                "<td>" + item.RDWCV + "</td>" +
-//                "<td>" + item.Linfocitos + "</td>" +
-//                "<td>" + item.Monocitos + "</td>" +
-//                "<td>" +item.Eosinofilos + "</td>" +
-//                "<td>" + item.Basofilos + "</td>" +
-//                "<td>" + item.VPM + "</td>" +
-//                "<td  >" + item.Plaquetas + "</td>" +
-//                "<td colspan=\"10\" >" + item.Diagnosticos + "</td>" +
-//                "</tr> ";
-//    }
     let strJson;
     for (var i = 0; i < datos.length; i++)
     {
